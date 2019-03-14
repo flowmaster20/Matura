@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int zamien(char znak);
+
 int main(){
 
 string slowo;
@@ -15,12 +17,24 @@ cin >> klucz;
 
 
 for (int i =0 ;i < slowo.size();i++){
+i = k;
+if (i = klucz.size()) k == 0;
+znak = zamien(slowo[i]);
+znakklucz = zamien(klucz[k]);
 
-char literaslowo = slowo[i]; //nwm czy to zadziala ale to jest jedyny prosty sposob jaki sam wymslilem
+wynik = wynik +
 
-int numerlitera = literaslowo;
 
 }
+
+
+}
+
+zamien (char znak){
+
+int znakliczba = znak
+
+return znakliczba;
 
 
 }
