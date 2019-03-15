@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstdlib>
-#include<conio.h>
 #include<fstream>
+#include <string>
 
 using namespace std;
 
@@ -13,11 +13,13 @@ fstream p1;
 
 p1.open("binarne.txt",ios::in);
 
-for (int i =0;i< 500;i++){
+for (int i =0;i< 5;i++){
         string liczba;
 p1>>liczba;
 
 for(int x = 0;x< liczba.size()/2;x++){
+
+  if (liczba.size()>16)cout << liczba.size()<<endl;
 
 if(liczba[x] != liczba[x+liczba.size()/2]){
 
@@ -26,23 +28,24 @@ break;
 
 }
 
-for(int x =0;x< liczba.size();x+4){
 
-    for(int y =0;y<4;y++){
-
-
-
-    }
 
 }
+string liczba2;
+cout << liczba<<"  ";
+while(liczba[0]=='0'){
+
+liczba  = liczba.substr(1);
 
 }
+if (liczba.size()<= 16){
+
+
 
 }
-
-cout << ilenie;
-
+cout << liczba<< endl;
 }
 
 
 
+}
