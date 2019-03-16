@@ -53,7 +53,7 @@ zeruj(tab2);
       break;
     }
     //if(x ==4 && tab[0][y].size() == tab[x][y].size()){
-      if(x ==4 && check(tab1,tab2)==true){
+      if(x ==4 && check(tab1,tab2)==true){         //zeby otzrymac odp do pkt 1 koment to uncoment to wyzej
       for (int i = 0;i<5;i++){
       cout << tab[i][y]<<"  ";
     }
