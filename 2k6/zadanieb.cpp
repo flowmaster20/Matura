@@ -23,7 +23,9 @@ string nowy;
 
     p1 >> nowy;
 
-    if (fromhex(nowy)%2==0){
+    string znak =  "" +nowy[nowy.size()-1];
+
+    if (nowy[nowy.size()-1]=='A'||nowy[nowy.size()-1]=='C'||nowy[nowy.size()-1]=='E'){
 
       cout << nowy << "     "<< fromhex(nowy)<<endl;
       licz++;
@@ -57,11 +59,11 @@ return wynik;
 
 }
 unsigned long long fromhex(string liczba){
-int wynik=0;
+long long  wynik=0;
 for(int i =0 ;i < liczba.size();i++){
 
 
-  wynik = wynik + liczba[i]-55 * pow(16,liczba.size()-1-i);
+  wynik = wynik + (liczba[i]-55) * pow(16,i);
 
 
 }
