@@ -27,21 +27,32 @@ int main(){
 
     p1 >> nowy;
 
-    for(int x = 0; x < slowa.size();x++)
+    for(int x = 0; x < slowa.size();x++){
 
     if (slowa[x] == nowy){
 
-      ile[x]++;
+      ile[x]=ile[x]+1;
+      break;
 
     }
 
-    if(i+1 == slowa.size() && nowy != slowa[i]){
-
+    if(x+1 == slowa.size()){
+       if( nowy != slowa[x]){
       slowa.push_back(nowy);
       ile.push_back(1);
-
+      break;
     }
-
+    }
+}
   }
+int k =0;
+for (int i = 0;i< slowa.size();i++){
+if (ile[i]>1){
 
+  cout <<k<<"   "<<slowa[i]<<"   "<<ile[i]<<endl;
+  k++;
+}
+
+}
+cout << slowa.size();
 }
