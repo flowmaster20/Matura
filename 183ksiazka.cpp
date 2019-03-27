@@ -30,7 +30,7 @@ int r;
 
 while (b!=0){
 
-r= a % b;
+r = a % b;
 a = b;
 b = r;
 
