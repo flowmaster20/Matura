@@ -19,7 +19,7 @@ double c = 0.05;
 
 int main (){
 
- bool firstw = true;
+ bool firstw = true; 
  bool firstz = true;
 
 for (int i = 0;i < 40 * 12;i++){
