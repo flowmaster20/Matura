@@ -4,9 +4,8 @@
 
 using namespace std;
 
+
 class shape {
-
-
 
 public:
 
@@ -46,8 +45,10 @@ int main (){
 
 shape shape1;
 
+
 shape1.get_data();
 
 cout << shape1.v();
+
 
 }
