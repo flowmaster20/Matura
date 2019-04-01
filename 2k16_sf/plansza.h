@@ -46,6 +46,16 @@ for (int y = 0;y < 12;y++){
 }
 }
 
+
+
+
+
+
+
+
+
+
+
 bool update(int posx ,int posy){
 
 //LICZYMY ILE ZYWYCH DOOKOLA
@@ -56,6 +66,9 @@ for (int y = posy - 1;y < posy + 1;y++){
     for(int x = posx - 1;x < posx + 1;x++){
 
         if(y == 0 && x == 0){
+
+            zywe = zywe;
+
         }
         else{
 
@@ -82,16 +95,34 @@ return true;
 
 }
 
-
-
-    //cout << "nr3 wywolany"<<endl;
-
-return false;
-
+    //cout << "nr3 wywolany"<<endl
+    
+  else{  
+    return false;
+  }
 }
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
