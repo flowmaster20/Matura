@@ -61,7 +61,8 @@ bool update(int posx ,int posy){
 //LICZYMY ILE ZYWYCH DOOKOLA
 
 
-
+//TODO WYGLADA JAKBY PROBLEM BYL W LICZENIU ZYWYCH KOMUREK 
+//- CZEMU ZAWSZE ZWRACA 1 BEZ WZGLEDU CO SIE DZIEJE
 for (int y = posy - 1;y <= posy + 1;y++){
     int zywe = 0;
     for(int x = posx - 1;x <= posx + 1;x++){
