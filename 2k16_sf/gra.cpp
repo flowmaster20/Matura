@@ -14,13 +14,29 @@ int main () {
 
 plansza plansza[100];
 
+plansza[0].input_data();
+
 //PRZECHODZIMY PRZEZ WSZYTSKIE PLANSZE
 
-for (int i = 0;i < 100 - 1;i++){ // 100 - 1 BO ZAWSZE ODNAWIAMY STAN NASTEPNEJ
+for (int i = 1;i < 5 - 1;i++){ // 100 - 1 BO ZAWSZE ODNAWIAMY STAN NASTEPNEJ
 
 //TODO PRZEJSCIE PO WSZYTSKICH PUNKTACH DANEJ PLANSZY
-plansza[i + 1].data[y][x] = plansza[i].update(x,y);
+for  (int y = 0;y <  12;y++){
 
+    for (int x = 0;x < 20;x++){
+
+        //plansza[i].data[y][x] = plansza[i - 1].data[y][x];
+
+        plansza[i + 1].data[y][x] = plansza[i].update(x,y);
+    
+    }
+
+}
+
+plansza[i].show();
+
+cout << endl;
+cout << endl;
 
 }
 

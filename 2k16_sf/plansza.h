@@ -69,20 +69,26 @@ for (int y = posy - 1;y < posy + 1;y++){
 
 if (zywe > 1 && zywe < 4 && data[posy][posx] == true){
 
+    //cout << "nr1 wywolany"<<endl;
+
 return true;
 
 }
 else if (zywe == 3 && data[posy][posx] == false){
 
+    //cout << "nr2 wywolany"<<endl;
+
 return true;
 
 }
-else {
+
+else{
+
+    //cout << "nr3 wywolany"<<endl;
 
 return false;
 
 }
-
 
 }
 
@@ -95,6 +101,19 @@ return false;
 void show(){
 
 //TODO NAPISAC FUNKCJE WYSWIETLAJACA
+
+for (int y = 0; y < 12 ; y++){
+
+
+    for (int x = 0 ; x < 20; x++){
+
+        cout << " " <<data[y][x] << " ";
+
+    }
+
+cout << endl;
+
+}
 
 }
 
