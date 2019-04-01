@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <fstream>
 
-
 using namespace std;
 
 class plansza {
@@ -61,10 +60,13 @@ bool update(int posx ,int posy){
 
 //LICZYMY ILE ZYWYCH DOOKOLA
 
-int zywe = 0;
 
-for (int y = posy - 1;y < posy + 1;y++){
-    for(int x = posx - 1;x < posx + 1;x++){
+
+for (int y = posy - 1;y <= posy + 1;y++){
+    int zywe = 0;
+    for(int x = posx - 1;x <= posx + 1;x++){
+        
+        
 
         if(y == 0 && x == 0){
 
@@ -80,6 +82,7 @@ for (int y = posy - 1;y < posy + 1;y++){
 
 // WARUNKI CZY ZYWA CZY MARTWA
 
+ cout << zywe ;
 
 if (zywe > 1 && zywe < 4 && data[posy][posx] == true){
 
@@ -133,14 +136,14 @@ return true;
 
 void show(){
 
-//TODO NAPISAC FUNKCJE WYSWIETLAJACA
 
 for (int y = 0; y < 12 ; y++){
 
 
     for (int x = 0 ; x < 20; x++){
 
-        cout << " " <<data[y][x] << " ";
+        if (data[y][x]  == true )cout << " "<<"X"<<" ";
+        if (data[y][x]  == false )cout << " "<<"."<<" ";
 
     }
 
