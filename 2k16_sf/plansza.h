@@ -62,7 +62,7 @@ for (int y = posy - 1;y < posy + 1;y++){
             zywe++; 
 
         }
-    }
+    
 
 // WARUNKI CZY ZYWA CZY MARTWA
 
@@ -74,7 +74,7 @@ if (zywe > 1 && zywe < 4 && data[posy][posx] == true){
 return true;
 
 }
-else if (zywe == 3 && data[posy][posx] == false){
+if (zywe == 3 && data[posy][posx] == false){
 
     //cout << "nr2 wywolany"<<endl;
 
@@ -82,19 +82,20 @@ return true;
 
 }
 
-else{
+
 
     //cout << "nr3 wywolany"<<endl;
 
 return false;
 
 }
+}
 
 }
 
 
 
-}
+
 
 //WYSWIETLAMY NASZA TABLICE
 

@@ -18,7 +18,7 @@ plansza[0].input_data();
 
 //PRZECHODZIMY PRZEZ WSZYTSKIE PLANSZE
 
-for (int i = 1;i < 5 - 1;i++){ // 100 - 1 BO ZAWSZE ODNAWIAMY STAN NASTEPNEJ
+for (int i = 1;i < 100 - 1;i++){ // 100 - 1 BO ZAWSZE ODNAWIAMY STAN NASTEPNEJ
 
 //TODO PRZEJSCIE PO WSZYTSKICH PUNKTACH DANEJ PLANSZY
 for  (int y = 0;y <  12;y++){
