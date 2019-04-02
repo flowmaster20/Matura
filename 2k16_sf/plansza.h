@@ -94,7 +94,7 @@ for (int y = posy - 1;y <= posy + 1;y++){
             
         }
 
-        if(y == 0 && x == 0){
+        if(y == posy && x == posy){
 
             zywe = zywe;
 
