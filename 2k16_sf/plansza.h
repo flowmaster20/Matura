@@ -63,11 +63,36 @@ bool update(int posx ,int posy){
 
 //TODO WYGLADA JAKBY PROBLEM BYL W LICZENIU ZYWYCH KOMUREK 
 //- CZEMU ZAWSZE ZWRACA 1 BEZ WZGLEDU CO SIE DZIEJE
+int zywe = 0;
 for (int y = posy - 1;y <= posy + 1;y++){
-    int zywe = 0;
+    
     for(int x = posx - 1;x <= posx + 1;x++){
         
+        //jezeli wychodzi poza zakres to zerujemy
+
+        if (y > 11 && data[0][x] == true){
+
+            zywe  = zywe + 1;
+            
+        }
+
+        if (x > 19 && data[y][0] == true){
+
+            zywe  = zywe + 1;
+            
+        }
         
+        if (y < 0 && data[11][x] == true){
+
+            zywe  = zywe + 1;
+            
+        }
+
+        if (x < 0 && data[y][19] == true){
+
+            zywe  = zywe + 1;
+            
+        }
 
         if(y == 0 && x == 0){
 
@@ -75,11 +100,12 @@ for (int y = posy - 1;y <= posy + 1;y++){
 
         }
         else{
-
-            zywe++; 
-
+            if (data[y][x] == true){
+            zywe = zywe + 1; 
+            }
         }
-    
+    }
+}    
 
 // WARUNKI CZY ZYWA CZY MARTWA
 
@@ -106,9 +132,9 @@ return true;
     return false;
   }
 }
-}
 
-}
+
+
 
 
 
