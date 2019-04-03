@@ -61,7 +61,6 @@ bool update(int posx ,int posy){
 //LICZYMY ILE ZYWYCH DOOKOLA
 
 
-//TODO WYGLADA JAKBY PROBLEM BYL W LICZENIU ZYWYCH KOMUREK 
 //- CZEMU ZAWSZE ZWRACA 1 BEZ WZGLEDU CO SIE DZIEJE
 int zywe = 0;
 for (int y = posy - 1;y <= posy + 1;y++){
@@ -69,6 +68,12 @@ for (int y = posy - 1;y <= posy + 1;y++){
     for(int x = posx - 1;x <= posx + 1;x++){
         
         //jezeli wychodzi poza zakres to zerujemy
+
+        if (data [posx][posy] == true){
+
+            zywe = zywe - 1;
+
+        }
 
         if (y > 11 && data[0][x] == true){
 
@@ -96,7 +101,7 @@ for (int y = posy - 1;y <= posy + 1;y++){
 
         if(y == posy && x == posy){
 
-            zywe = zywe;
+            zywe = zywe; //TODO nwm dlaczego dalej liczy srodkowe pole 
 
         }
         else{
