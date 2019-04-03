@@ -6,7 +6,12 @@
 
 using namespace std;
 
-void test(fstream p1);
+int n;
+stack <int> stos;
+vector <int> tab[ 8 ];
+vector <bool> odw;
+
+void fun(int x);
 
 int main(){
 
@@ -15,11 +20,11 @@ fstream p1;
 p1.open("graf.txt",ios::in);
 
 
-int n;
+
 
 p1 >> n;
 
-vector <int> tab[ n + 1 ];
+
 
 while (!p1.eof()){
 int a , b;
@@ -32,16 +37,55 @@ tab[b].push_back(a);
 
 }
 
+vector <int > wynik;
+
+for (int i = 0; i <= n ; i ++){
+
+ odw.push_back(false);
+
+}
+
+
+
 
 for(int i = 1;i < n;i++){
 
-    cout << i <<" -- " <<tab[i].size();
+    cout << i << " -- " <<tab[i].size();
 
     cout << endl;
 
 
 }
 
+cout << endl;
+
+fun (1);
+
+}
+
+void fun(int x){
+    
+    odw[x] = true;
+
+for (int i = 0 ; i < tab[x].size();i++){
+
+    
+
+    stos.push(tab[x][i]);
+
+    if (odw[stos.top()] == false){
+
+        cout << stos.top();
+        fun(stos.top());
+
+    }
+    else{
+
+        stos.pop();
+
+    }
+
+}
 
 }
 
