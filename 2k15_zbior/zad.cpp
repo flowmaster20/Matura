@@ -37,7 +37,12 @@ for(int i = 0;i < 309;i++){
     if (maxl < dlugosc){
 
         maxl = dlugosc;
-        dif = tab[i + k] - tab[i];
+        //dif = tab[i + k] - tab[i];
+            if (tab[i + k] - tab[i] > dif){
+
+    dif = tab[i + k] - tab[i];
+    }
+
 
     }
     if (dlugosc > 3){
@@ -46,9 +51,15 @@ for(int i = 0;i < 309;i++){
 
     }
 
+    cout << dif<< endl;
+    if (tab[i + k] - tab[i] > dif){
+
+    dif = tab[i + k] - tab[i];
+    }
+
     i += k -1;
 }
 
-cout << endl<<licz;
+cout << endl<<maxl;
 
 }
