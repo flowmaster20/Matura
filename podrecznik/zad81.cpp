@@ -42,6 +42,9 @@ p1 >> t[i].p[j].y;
 
 for (int k = 0; k < 3;k++){
 
+//BLAD POLEGA NA TYM ZE SPRAWDZAM TYLKO POJEDYNCZE DWOJKI Z SOBA A NIE WSZYTSKIE RAZEM 
+
+
 if (t[i].p[k].x > 0 && t[i].p[k].y > 0){
 
 cwiartka1++;
