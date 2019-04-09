@@ -46,26 +46,75 @@ for (int y = 0;y < 12;y++){
 }
 }
 
+
+
+
+
+
+
+
+
+
+
 bool update(int posx ,int posy){
 
 //LICZYMY ILE ZYWYCH DOOKOLA
 
+
+//- CZEMU ZAWSZE ZWRACA 1 BEZ WZGLEDU CO SIE DZIEJE
 int zywe = 0;
+for (int y = posy - 1;y <= posy + 1;y++){
+    
+    for(int x = posx - 1;x <= posx + 1;x++){
+        
+        //jezeli wychodzi poza zakres to zerujemy
 
-for (int y = posy - 1;y < posy + 1;y++){
-    for(int x = posx - 1;x < posx + 1;x++){
+        if (data [posx][posy] == true){
 
-        if(y == 0 && x == 0){
+            zywe = zywe - 1;
+
+        }
+
+        if (y > 11 && data[0][x] == true){
+
+            zywe  = zywe + 1;
+            
+        }
+
+        if (x > 19 && data[y][0] == true){
+
+            zywe  = zywe + 1;
+            
+        }
+        
+        if (y < 0 && data[11][x] == true){
+
+            zywe  = zywe + 1;
+            
+        }
+
+        if (x < 0 && data[y][19] == true){
+
+            zywe  = zywe + 1;
+            
+        }
+
+        if(y == posy && x == posy){
+
+            zywe = zywe; //TODO nwm dlaczego dalej liczy srodkowe pole 
+
         }
         else{
-
-            zywe++; 
-
+            if (data[y][x] == true){
+            zywe = zywe + 1; 
+            }
         }
-    
+    }
+}    
 
 // WARUNKI CZY ZYWA CZY MARTWA
 
+ cout << zywe ;
 
 if (zywe > 1 && zywe < 4 && data[posy][posx] == true){
 
@@ -82,16 +131,34 @@ return true;
 
 }
 
-
-
-    //cout << "nr3 wywolany"<<endl;
-
-return false;
-
-}
+    //cout << "nr3 wywolany"<<endl
+    
+  else{  
+    return false;
+  }
 }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,14 +168,14 @@ return false;
 
 void show(){
 
-//TODO NAPISAC FUNKCJE WYSWIETLAJACA
 
 for (int y = 0; y < 12 ; y++){
 
 
     for (int x = 0 ; x < 20; x++){
 
-        cout << " " <<data[y][x] << " ";
+        if (data[y][x]  == true )cout << " "<<"X"<<" ";
+        if (data[y][x]  == false )cout << " "<<"."<<" ";
 
     }
 
