@@ -19,6 +19,8 @@ for (int i = 0;i < 310;i++){
 
     p1 >> tab[i];
 
+    cout << tab[i]<<endl;
+
 }
 
 for(int i = 0;i < 309;i++){
@@ -30,7 +32,7 @@ for(int i = 0;i < 309;i++){
     while(tab[i + k-1]<tab[i + k]){
 
         dlugosc++;
-        cout << dlugosc << endl;
+        //cout << dlugosc << endl;
         k++;
 
     }
@@ -51,13 +53,13 @@ for(int i = 0;i < 309;i++){
 
     }
 
-    cout << dif<< endl;
+    //cout << dif<< endl;
     if (tab[i + k] - tab[i] > dif){
 
     dif = tab[i + k] - tab[i];
     }
 
-    i += k -1;
+    //i += k -1;
 }
 
 cout << endl<<maxl;
