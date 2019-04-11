@@ -8,27 +8,28 @@
 using namespace std;
 
 const long int n = 10000000000;
-bool pierwsze[100000];
+const int ns = 1000000000 ;
+bool pierwsze[1000000000];
 
 vector <int> dzielniki[1000];
 
 
 int main(){
 fstream p1,p2;
-p2.open("59.txt",ios::out);
+p2.open("pierwsze.txt",ios:: out);
 
-for(int i = 0;i < sqrt(n);i++){
+for(int i = 0;i < ns;i++){
     pierwsze[i] = true;
-    cout << i<<endl;
+    //cout << i<<endl;
 }
 
 cout << "czyszczenie tablicy zakonczone"<<endl;
 
-for(int i = 2;i < sqrt(n) ; i++){
+for(int i = 2;i < ns ; i++){
 
 if(pierwsze[i]==true){
 int k = 2;
-while(k * i < sqrt(n)){
+while(k * i < ns){
 
 pierwsze[k * i] = false;
 //cout << k * i <<endl;
@@ -39,7 +40,7 @@ k++;
 
 cout << "znaleziono pierwsze: "<<endl<<endl;
 
-for(int i = 0; i < sqrt(n);i++){
+for(int i = 0; i < ns;i++){
 
 if (pierwsze[i] == true){
 
@@ -61,9 +62,10 @@ p1 >> liczba;
 if(liczba % 2 != 0){
 
 while(liczba > 1){
-    for (int i = 1;i < sqrt(n);i ++){
+    for (int i = 1;i < ns;i ++){
         if(liczba % i == 0){
             liczba = liczba /i;
+            cout << liczba<< endl;
             dzielniki[p].push_back(i);
         }//koniec if
     }//koniec i 
@@ -72,7 +74,7 @@ while(liczba > 1){
 
 }//koniec if
 
-for (int i = 1;i < dzielniki[p].size();i++){
+for (int i = 0;i < dzielniki[p].size();i++){
 
     cout << dzielniki[p][i]<<" ";
 
