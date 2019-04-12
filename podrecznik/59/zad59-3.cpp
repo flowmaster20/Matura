@@ -3,6 +3,8 @@
 #include <cstdlib>
 #include <fstream>
 #include <string>
+#include <cmath>
+#include <math.h>
 
 using  namespace std;
 
@@ -12,33 +14,25 @@ int main (){
 
 fstream p1;
 p1.open("59.txt",ios::in);
+string liczba;
+cin >> liczba;
+int iloczyn = 1;
 
-for (int i = 0 ; i < 1;i ++){
+for(int i = 0 ;i < liczba.size();i++){
 
-int liczba;
+   int znak = liczba[i];
+   znak -= 48;
+   cout << znak<<endl;
 
-p1 >> liczba;
+   iloczyn *= znak;
 
-cout << liczba<<endl<<endl;
-
-while (liczba > 9){
-
-liczba =  w(liczba);
-cout << liczba <<"  ";
-
-}
-
-cout <<endl <<liczba <<endl;
 
 }
 
-}
-
-int w(int n){
-
-while (9*(10 * k)  )
+cout << endl<<endl<<iloczyn;
 
 }
+
 
 
 
