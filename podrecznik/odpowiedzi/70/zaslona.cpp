@@ -107,8 +107,9 @@ int main()
  cout<<"Dlugosc tasmy: "<<dlugosc(a,b,n)<<endl;
  cout<<"Suma dlugosci pasow: " <<zadanie3()<<endl;
 // system("PAUSE");
- return 0;
+cout << endl<<g(10);
 
+ return 0;
 
 
 
