@@ -21,7 +21,7 @@ if (n.size() != 1 && n[0] != 'a'){
 cout << "slaby a palindrom";
 return true;
 }
-else if(pal(n.substr(0,n.size()/2)) == true|| pal(n.substr(0,n.size()/2)) == true){
+else if(n.size()%2 == 0 && (pal(n.substr(0,n.size()/2)) == true || pal(n.substr(0,n.size()/2)) == true)){
 
 return true;
 
