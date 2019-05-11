@@ -6,6 +6,15 @@
 
 using namespace std;
 
+class liczba {
+
+int dec;
+string bin;
+string oct;
+string qtr;
+
+};
+
 int na10(string binarny,int podstawa);
 string na2(int liczba);
 
@@ -84,7 +93,7 @@ string wynik="";
         cout << liczba << "  " << wynik<< endl;
     }
     else{
-        liczba = (liczba - 1) / 2;
+        liczba = (liczba - 1);
         wynik += '1';
         cout << liczba << "  " << wynik<< endl;
     }
